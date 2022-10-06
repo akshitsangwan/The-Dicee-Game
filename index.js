@@ -7,8 +7,20 @@ document.querySelector(".img1").setAttribute("src", randomImage1);
 document.querySelector(".img2").setAttribute("src", randomImage2);
 
 if (randomNumber1 == randomNumber2)
+{
     document.querySelector(".container h1").innerHTML = "👏Draw👏";
+    let audio1=new Audio("sounds/draw.mp3")
+    audio1.play();
+}
 else if (randomNumber1 > randomNumber2)
-    document.querySelector(".container h1").innerHTML = "🥳Player 1 Wins🥳";
+{
+    document.querySelector(".container h1").innerHTML = "🥳You Win🥳";
+    let audio2=new Audio("sounds/win1.mp3")
+    audio2.play();
+}
 else
-    document.querySelector(".container h1").innerHTML = "🎊Player 2 Wins🎊";
+{
+    document.querySelector(".container h1").innerHTML = "🎊Bhai Wins🎊";
+    let audio3=new Audio("sounds/win2.mp3")
+    audio3.play();
+}
